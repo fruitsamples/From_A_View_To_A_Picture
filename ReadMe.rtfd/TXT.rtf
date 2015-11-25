@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1022
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15740\viewh14220\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic PlasmaExhibitsApp.pdf \width2560 \height2560
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b\fs30 \cf0 From A View to A Picture
+\b0\fs24  (a.k.a. Plasma Exhibits I)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+5/26/2009\
+\
+
+\b Description:
+\b0 \
+\
+This application demonstrates hardware accelerated view capture pipeline from a view and saving the results as files using Image I/O.  The contents are 3D animated objects generated using OpenGL, and captured as a snapshot using pixel buffer objects.  The images can then be saved as tiff, pdf, bmp, pict, png, gif, jpeg, or jp2 files using Image I/O.  The application also manages and stores properties of OpenGL shader uniforms and image file authoring preferences.\
+\
+
+\b Class Groups:
+\b0 \
+\
+
+\b Class Groups:
+\b0 \
+\
+This application includes many reusable utility classes implementing and abstracting various application programming interface workflows.  The application uses MVC design pattern and as such utility classes, or class groups, are organized in the Xcode project with the following hierarchy:\
+\
+\'95	Model\
+	\'95	Files\
+		\'95	Preferences\
+			\'95	Mediator class that manages application's property list\
+			\'95	Mediator utility class for managing property list(s)\
+	\'95	Image\
+		\'95	Bitmap\
+				\'95	Utility functions for converting pixels to opaque image references\
+		\'95	Loader\
+			\'95	Utility class for loading image arrays from application's bundle\
+	\'95	Math\
+		\'95	Utility class for working with quaternions\
+		\'95	Utility classes for working with Euclidean vectors\
+	\'95	OpenGL\
+		\'95	Exhibits\
+			\'95	Displaying and managing various 3D geometrical objects\
+			\'95	Management of their Plasma shader\
+			\'95	Management of palette and pattern textures\
+			\'95	Mediator for interacting with the UI\
+		\'95	Object\
+			\'95	Utility class for timer based animation\
+			\'95	Utility class for managing of objects physical motion properties\
+			\'95	Utility class for trackball paradigm interaction with 3D object\
+		\'95	PBO\
+			\'95	Utility class for PBO asynchronous read pixel operation\
+			\'95	Utility class for PBO asynchronous texture updates\
+		\'95	Pixels\
+			\'95	Utility class for acquiring a valid pixel format from a set of desired attributes\
+		\'95	Quad\
+			\'95	Utility class for instantiating a VBO based quad\
+		\'95	Query\
+			\'95	Utility class for querying the GPU for its hardware attributes\
+		\'95	Shaders\
+			\'95	Compiles, links, and acquires a program object from a fragment and vertex source\
+			\'95	Manages assets such as uniforms and textures associated with a shader\
+			\'95	Executes a shader along with its assets\
+		\'95	Surfaces\
+			\'95	Utility classes to build and then instantiate various forms of exotic 3D objects\
+		\'95	Text\
+			\'95	Utility classes to convert system fonts to textures for use with OpenGL\
+		\'95	Texture\
+			\'95	Utility classes for managing standard 1D, 2D, 3D textures as well as shared and cached textures\
+			\'95	A mediator class for managing various forms of textures including textures bound to a PBO\
+		\'95	View\
+			\'95	Utility classes for taking a snapshot from a view and saving the results as tiff, pdf, bmp, png, pict, gif, jpeg, jp2.\
+	\'95	Utilities\
+		\'95	A utility class for generating a standard path name for saving images\
+		\'95	A utility class that implements a Mach based performance timer\
+\'95	View\
+	\'95	Utility classes for implementing a customized animating OpenGL view that allows limited interaction with 3D objects.\
+\'95	Controller\
+	\'95	Controller class to handle preferences UI interaction with property list\
+	\'95	Controller class to handle UI interaction with filters, shaders, and property list\
+\
+
+\b Class Hierarchy:
+\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 {{\NeXTGraphic Plasma Exhibits I Class Hierarchy.pdf \width27740 \height89480
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+}
